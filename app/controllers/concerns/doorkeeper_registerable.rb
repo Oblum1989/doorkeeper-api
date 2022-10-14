@@ -17,6 +17,8 @@ module DoorkeeperRegisterable
                                                   refresh_token: generate_refresh_token, expires_in: Doorkeeper.configuration.access_token_expires_in.to_i, scopes: '')
     {
       id: user_id,
+      email: user.email,
+      role: user.role,
       access_token: access_token.token,
       token_type: token_type,
       expires_in: access_token.expires_in,
